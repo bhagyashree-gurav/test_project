@@ -12,7 +12,7 @@ resource "aws_internet_gateway" "myigw" {
  }
 resource "aws_subnet" "mysubnet" {
     vpc_id = "aws_vpc.myvpc.id"
-    cidr_block = "var.subnet_cidr_block"
+    cidr_block = var.subnet_cidr_block
     availability_zone = data.aws_availability_zones.available.names[0]
     tags = {
         name = "${var.env_prefix}-subnet"
