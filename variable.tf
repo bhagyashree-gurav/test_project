@@ -24,7 +24,7 @@ variable "instance_type" {
     default = "t2.micro"
 }
 variable "subnet_cidr_block" {
-    destription = "my vpc cidr block value"
+    description = "my subnet cidr block value"
     type = string
     default = "10.0.0.0/24"
 }
