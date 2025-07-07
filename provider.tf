@@ -1,3 +1,5 @@
+# Remove this invalid block
+# or if you intended a provider, use this:
 provider "aws" {
     region = "us-east-1"
 }
