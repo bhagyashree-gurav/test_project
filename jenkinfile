@@ -1,0 +1,34 @@
+pipeline {
+agent any 
+stages {
+    stage ('checkout') {
+    steps { 
+         sh "checkout the code from git" }
+}
+}
+stages {
+    stage ('terraform init') {
+    steps { 
+         sh "terraform init" }
+}
+}
+stages {
+    stage ('terraform plan') {
+    steps { 
+         sh "terraform plan" }
+}
+}
+stages {
+    stage ('terraform apply') {
+    steps { 
+         sh "terraform apply" }
+}
+}
+post {
+     
+    success {
+        echo "Pipeline completed successfully"
+    }
+    
+}
+}
