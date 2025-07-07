@@ -51,3 +51,4 @@ resource "aws_subnet" "mysubnet" {
     tags = {
     Name = "${var.env_prefix}-SG"
  }
+}
