@@ -1,12 +1,12 @@
  resource "aws_vpc" "myvpc" {
     cidr_block = var.vpc_cidr_block
-    tags {
+    tags = {
         name =  "${var.env_prefix}-vpc"
     }
  }
 resource "aws_internet_gateway" "myigw" {
     vpc_id = aws_vpc.myVPC.id
-    tags {
+    tags = {
         name = "${var.env_prefix}-igw"
     }
  }
@@ -14,7 +14,7 @@ resource "aws_subnet" "mysubnet" {
     vpc_id = "aws_vpc.myvpc.id"
     cidr_block = "var.subnet_cidr_block"
     availability_zone = var.avail_zone
-    tags {
+    tags = {
         name = "${var.env_prefix}-subnet"
     }
  }
