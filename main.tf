@@ -7,5 +7,5 @@ resource "aws_ebs_volume" "my_volume" {
 resource "aws_volume_attachment" "attach" {
   device_name = "/dev/sdf"
   volume_id   = aws_ebs_volume.my_volume.id
-  instance_id = aws_instance.my_instance.id
+  instance_id = aws_instance.myapp-server.id
 }
