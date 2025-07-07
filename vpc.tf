@@ -5,7 +5,7 @@
     }
  }
 resource "aws_internet_gateway" "myigw" {
-    vpc_id = "aws_vpc.myVPC.id"
+    vpc_id = aws_vpc.myVPC.id
     tags {
         name = "${var.env_prefix}-igw"
     }
