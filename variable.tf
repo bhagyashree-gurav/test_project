@@ -8,11 +8,6 @@ variable "availability_zone" {
     type = string
     default = "us-east-1"
 }
-variable "subnet_cidr_block" {
-    description = "name of my subnet "
-    type = string
-    default = "10.0.0.0/24"
-}
 variable "env_prefix" {
     description = "prefix for environment name"
     type = string
